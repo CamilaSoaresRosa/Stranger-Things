@@ -42,6 +42,7 @@ header {
     height: 100vh;
     background-image: url("projeto imagens/hero.webp");
     background-size: cover;
+    background-position: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -274,3 +275,177 @@ footer {
         transform: translateX(-100%);
     }
 }
+
+/*MEDIA QUERIES - RESPONSAVEL PELA RESPONDIVIDADE DO SITE*/ 
+
+@media (max-width: 1500px) {
+    .sessaodois {
+        padding: 4vw; 
+    }
+}
+/*
+@media (max-width: 1400px) {
+    .cidades {
+        flex-direction: column;
+        align-items: start;
+        justify-content: end;
+        width: 100%;
+    }
+} nao sei o que eu errei aqui que nao fica colunado*/ 
+
+
+@media (max-width: 400px) {
+    .hero {
+        flex-direction: column;
+
+        .titulo {
+            padding: 5vw;
+            margin-top: 7vw;
+
+            h3 {
+                font-size: 12px;
+                text-align: justify;
+            }
+
+            h1 {
+                font-size: 10.5vw;
+            }
+        }
+
+        .chamado {
+            padding-bottom: 2vw;
+            text-align: center;
+            max-width: 80vw;
+            align-items: center;
+
+            p {
+                font-size: 5vw;
+            }
+
+        }
+    }
+
+    .sessaodois {
+        button {
+            display: none;
+        }
+
+        .titulosessao {
+            h2 {
+                max-width: 80vw;
+                padding-bottom: 5vw;
+            }
+        }
+
+        .cidades {
+            display: flex;
+            flex-direction: column;
+
+
+            .sidney, .mexico, .islandia {
+                margin: 4vw;
+                width: 80vw;
+
+                h3, {
+                    font-size: 4vw;
+                }
+            }
+
+            p {
+                max-width: 35%;
+                text-align: end;
+            }
+        }
+
+    }
+
+    .depoimentos {
+        .logos {   
+            img:nth-child(1), :nth-child(3){
+                width: 20%;
+            }
+
+            img:nth-child(2){
+                width: 40%;
+            }
+        }
+
+        .depoimento {
+            display: flex;
+            flex-direction: column;
+            width: 300%;
+
+            .dep {
+               margin-bottom: 8vw;
+
+               p {
+                margin-top: -5px;
+               }
+            }
+        }
+    }
+
+    .agradecimentos {
+        h2 {
+            text-align: center;
+            margin-bottom: 7vw;
+        }
+
+        ul {
+            width: max-content;
+            gap: 32px;
+            animation: textoinfinito 15s infinite linear;
+        }
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    footer {
+        .conteudofooter {
+            display: flex;
+            flex-direction: column;
+            padding: 4vw;
+
+            .titulofooter {
+                padding-top: 70px;
+                width: 100%;
+                h3 {
+                font-size: 12px;
+                text-align: justify;
+            }
+
+            h1 {
+                font-size: 10.5vw;
+            }
+            }
+
+            .parceria {
+                h3{
+                    font-size: 3vw;
+                }
+                gap: 10vw;
+                flex-wrap: wrap;
+
+                .redes {
+                    width: 100%;
+                    margin: 40px 0px 32px;
+                }
+            }
+
+        }
+
+        .logofooter {
+            margin-top: 40px;  
+        }
+
+        .textoinfinito {
+            h3 {
+            font-size: 25vw;    
+            }
+            
+        }
+    }
+}
+
