@@ -7,13 +7,26 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <header>
-        <h3>GC.</h3>
-        <img src="projeto imagens/netflix-logo.svg" alt="netflix-logo">
-    </header>
 
-    <main>
+    <div id="smooth-wrapper"> <!--obrigatorio pelo gsap pra scrool smoother-->
+		<div id="smooth-content"> <!--mesma coisa-->
+		    <header>
+            <h3>GC.</h3>
+            <img src="projeto imagens/netflix-logo.svg" alt="netflix-logo">
+            </header>
+
+            <main>
         <section class="hero">
+            <picture data-speed = 0.7>
+                <source media="(max-width: 600px)" srcset="imagens/bg-mobile.png">
+                <img src="imagens/bg-hero.png" alt="fundo">
+            </picture>
+
+            <picture class="pessoinhas">
+                <source media="(max-width: 600px)" srcset="imagens/bg-pessoas-mobile.png">
+                <img src="imagens/bg-pessoas.png" alt="pessoas">
+            </picture>
+            
             <div class="titulo">
                 <h3>THE EXPERIENCE</h3>
                 <h1>STRANGER THINGS</h1>
@@ -86,9 +99,9 @@
                 </ul>
             </div>
         </section>
-    </main>
+            </main>
 
-    <footer>
+            <footer>
         <section class="conteudofooter">
             <div class="titulofooter">
                     <h3>THE EXPERIENCE</h3>
@@ -127,6 +140,14 @@
             <h3>THE EXPERIENCE</h3>
             <h3>THE EXPERIENCE</h3>
         </div>
-    </footer>
+            </footer>	
+		</div>
+	</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollSmoother.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

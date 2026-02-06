@@ -19,6 +19,9 @@ h2 {
     letter-spacing: 5px;
 }
 
+body, html {
+    overflow-x: hidden;
+}
 
 body {
     background-color: #0c0102;
@@ -40,17 +43,37 @@ header {
 .hero {    
     width: 100%;
     height: 100vh;
-    background-image: url("projeto imagens/hero.webp");
     background-size: cover;
-    background-position: 50%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
     padding: 8vw;
+    position: relative;
 
+    picture {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        
+        img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+    }
+
+    
 
 
     .titulo {
+        margin-top: 4vw;
+        z-index: 3;
+        text-align: start;
         h3{
             font-weight: 300;
             letter-spacing: 12px;
@@ -58,13 +81,15 @@ header {
         }
 
         h1{
-            font-size: 4vw;
+            font-size: 3.5vw;
             max-width: 20vw;
             font-family: Banguiat;
         }
     }
 
     .chamado {
+        margin-top: 4vw;
+        z-index: 3;
         display: flex;
         flex-direction: column;
         align-items: end;
@@ -73,6 +98,18 @@ header {
         justify-content: end;
         text-align: end;
     }
+}
+
+.hero:before {
+    content: "";
+    background: linear-gradient(180deg, rgba(12, 1, 2, 0.00) 0%, #0c0102 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    
 }
 
 button {
@@ -107,6 +144,11 @@ button {
     background-image: url("projeto imagens/bg-sec2.webp");
     background-size: cover;
     background-position: 50%;
+
+    position: relative;
+    z-index: 4;
+    background-color: #0c0102;
+    
 }
 
 .cidades {
@@ -294,9 +336,10 @@ footer {
 } nao sei o que eu errei aqui que nao fica colunado*/ 
 
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
     .hero {
         flex-direction: column;
+
 
         .titulo {
             padding: 5vw;
@@ -326,6 +369,7 @@ footer {
     }
 
     .sessaodois {
+
         button {
             display: none;
         }
@@ -356,7 +400,6 @@ footer {
                 text-align: end;
             }
         }
-
     }
 
     .depoimentos {
@@ -447,5 +490,4 @@ footer {
             
         }
     }
-}
 
