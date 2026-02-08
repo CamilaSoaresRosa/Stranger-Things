@@ -6,7 +6,8 @@ ScrollSmoother.create({
 	// smoothTouch: 0.1  much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 })
 
-gsap.from(".hero", {
+function animarPagina(){
+  gsap.from(".hero", {
     opacity: 0
 })
 
@@ -78,10 +79,28 @@ grupoTextoSplit.forEach((textoUnicoSplit) => {
     }
   });
 });
+}  //precisa selecionar uma função - as animaçoes da pagina- para abrir após o preloader
 
 
-  
+const tl = gsap.timeline({
+  onComplete(){ animarPagina()//apos preloadres finalizar animação, ele chama a pagina inicial. mantem as animaçoes da pagina.
+    gsap.to("#preloader", {
+      opacity: 0,
+      display: "none"
+    })
+  }
+});
 
+
+tl.to("#preloader path",{
+  duration: 1,
+  strokeDashoffset:0
+})
+tl.to("#preloader path", {
+  fill: "rgb(112, 1, 1)",
+  duration: 0.5,
+  strokeDashoffset: 0
+})
 
 //SplitText.create(.textosplit, {
 //  type: "lines, words, chars", //corta o texto em linhas, palavas e caracteres

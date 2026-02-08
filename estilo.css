@@ -13,6 +13,28 @@
     box-sizing: border-box; /*evita somar largura fantasma*/
 }
 
+#preloader {
+    width: 100%;
+    height: 100%;
+    background-color: #0c0102;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 20vw;
+        height: auto;
+
+        path {
+            fill: rgba(112, 1, 1, 0.418);
+            stroke:rgb(112, 1, 1) ;
+            stroke-dasharray: 700px;
+            stroke-dashoffset: 700px;
+        }
+    }
+}
+
 h2 {
     font-size: 2vw;
     font-weight: 300;
